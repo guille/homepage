@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "yarn run sass && webpack",
+    "build": "npm run sass && webpack",
     "sass": "./node_modules/dart-sass/sass.js src/:dist/",
     "sass:watch": "./node_modules/dart-sass/sass.js src/:dist/ --watch"
   },
