@@ -2,18 +2,18 @@
   "private": true,
   "scripts": {
     "build": "npm run sass && webpack",
-    "sass": "./node_modules/dart-sass/sass.js src/:dist/",
-    "sass:watch": "./node_modules/dart-sass/sass.js src/:dist/ --watch"
+    "sass": "./node_modules/sass/sass.js src/:dist/",
+    "sass:watch": "./node_modules/sass/sass.js src/:dist/ --watch"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.2.5"
+    "@babel/polyfill": "^7.2.5",
+    "sass": "^1.71.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.9",
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-typescript": "^7.23.3",
-    "dart-sass": "^1.22.10",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
     "webpack": "^5.90.3",
