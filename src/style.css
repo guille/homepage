@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+:root {
+  --minwidth: 250px;
+  --hoverline: #333;
+  --background: #eaeaea;
+  --animate: all 0.2s ease-in-out;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--background);
+  color: #555;
+  margin: auto;
+  height: 100%;
+}
+
+.container {
+  min-height: 300px;
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--minwidth), 1fr));
+  grid-gap: 5px;
+  padding-left: 5%;
+  padding-top: 2.5%;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+h2 {
+  font-size: 1.1em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+
+li:last-of-type {
+  margin-bottom: 10%;
+}
+
+a {
+  display: block;
+  position: relative;
+  margin: 1em 0;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: black;
+  text-decoration: none;
+}
+
+a span.key {
+  color: white;
+  /* darken background ~50% */
+  background-color: color-mix(in srgb, var(--background) 50%, black);
+  border-radius: 100%;
+  font-size: 0.75em;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+a span.link {
+  transition: var(--animate);
+  position: relative;
+}
+
+a span.link::before,
+a span.link::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 0px;
+  height: 3px;
+  margin: 3px 0 0;
+  transition: var(--animate);
+  transition-duration: 0.5s;
+  opacity: 0;
+  background-color: var(--hoverline);
+}
+
+a span.link::before {
+  left: 50%;
+}
+
+a span.link::after {
+  right: 50%;
+}
+
+a:focus span::before,
+a:focus span::after,
+li:hover span::before,
+li:hover span::after {
+  width: 50%;
+  opacity: 1;
+}

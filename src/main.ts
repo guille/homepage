@@ -1,5 +1,3 @@
-import data from './links';
-
 let keysToUrls: { [key: string]: string } = {};
 let match = "";
 

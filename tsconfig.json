@@ -1,17 +1,14 @@
 {
     "compilerOptions": {
+        "module": "none",
         "outDir": "./dist/",
-        // "sourceMap": true,
-        "noImplicitAny": true,
-        "module": "commonjs",
-        "target": "es5",
-        "resolveJsonModule": true,
-        "esModuleInterop": true,
+        "outFile": "./dist/main.js",
+        "strict": true,
+        "target": "ES2022",
         "lib": [
-              "esnext.array",
-              "es2018",
-              "dom",
-            ]
+            "ES2022",
+            "DOM"
+        ]
     },
     "include": [
         "./src/**/*"

@@ -6,22 +6,20 @@ Simple, customizable homepage.
 
 ## Setting up
 
-The links that will be shown in the page must be defined in the file `src/links.ts`. An example file ([src/example_links.ts](src/example_links.ts)) is provided in the repo. This file must define an object named "data" that acts as a nested dictionary:
+The links that will be shown in the page must be defined in a .ts file inside the `src/` directory. An example file ([example_links.ts](example_links.ts)) is provided in the repo (`mv example_links.ts src` to try it out). This file must define an object named "data" that acts as a nested dictionary:
 
 ```js
-"News": {
-	"nyt": {
-		"url": "https://www.nytimes.com/",
-		"name": "NY Times"
+"Dev": {
+	"hn": {
+		"url": "https://news.ycombinator.com/",
+		"name": "HackerNews"
 	}
 }
 ````
 
-Once the `links.ts` file has been set up, running `yarn build` will compile the TS and SCSS files into the `dist` folder. The `dist/index.html` file will display the homepage.
+Once the links file has been set up, running `npm run build` will compile the TypeScript files into the `dist` folder. The `dist/index.html` file will display the homepage.
 
 ### Future work
 
 * Store Lato and Montserrat fonts locally.
-* Add an input field when the user presses keys that will help opening links without having to reach for the mouse. Note that pressing the key of a link (e.g. "nyt") followed by Enter will already work.
-* Integrate sass into webpack.
-* Minify CSS.
+* Add an input field when the user presses keys that will help opening links without having to reach for the mouse. Note that pressing the key of a link (e.g. "hn") followed by Enter will already work.
