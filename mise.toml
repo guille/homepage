@@ -1,0 +1,6 @@
+[tools]
+node = "24"
+
+[tasks.build]
+description = "Build homepage"
+run = "npm run build"
